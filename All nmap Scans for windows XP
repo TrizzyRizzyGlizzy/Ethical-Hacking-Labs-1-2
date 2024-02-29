@@ -1,0 +1,90 @@
+--TCP SCAN--
+nmap -p- -sT 192.168.1.129                               
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:16 EST
+Stats: 0:00:05 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 0.01% done
+Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 0.01% done
+Stats: 0:08:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 35.55% done; ETC: 10:38 (0:14:25 remaining)
+Stats: 0:08:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 35.55% done; ETC: 10:38 (0:14:25 remaining)
+Stats: 0:08:03 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 35.58% done; ETC: 10:38 (0:14:24 remaining)
+Nmap scan report for 192.168.1.129
+Host is up (0.00016s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1350.76 seconds
+
+--SYN SCAN--
+nmap -p- -sS 192.168.1.129        
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:16 EST
+Nmap scan report for 192.168.1.129
+Host is up (0.00015s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1352.00 seconds
+
+--UDP SCAN--
+nmap -p- -sU 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:17 EST
+Stats: 0:07:00 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 30.88% done; ETC: 10:39 (0:15:29 remaining)
+Nmap scan report for 192.168.1.129
+Host is up (0.00028s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 open|filtered udp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1352.60 seconds
+
+--XMAS SCAN--
+nmap -p- -sX 192.168.1.129        
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:17 EST
+Stats: 0:06:34 elapsed; 0 hosts completed (1 up), 1 undergoing XMAS Scan
+XMAS Scan Timing: About 28.96% done; ETC: 10:40 (0:15:54 remaining)
+Stats: 0:06:34 elapsed; 0 hosts completed (1 up), 1 undergoing XMAS Scan
+XMAS Scan Timing: About 28.98% done; ETC: 10:40 (0:15:56 remaining)
+Nmap scan report for 192.168.1.129
+Host is up (0.00072s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 open|filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1352.47 seconds
+
+
+--NULL SCAN--
+nmap -p- -sN 192.168.1.129        
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:18 EST
+Stats: 0:06:06 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
+NULL Scan Timing: About 26.85% done; ETC: 10:40 (0:16:21 remaining)
+Stats: 0:06:06 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
+NULL Scan Timing: About 26.85% done; ETC: 10:40 (0:16:23 remaining)
+Nmap scan report for 192.168.1.129
+Host is up (0.00017s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 open|filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1352.82 seconds
+
+-SCRIPT SCAN--
+nmap -p- --script vuln,amqp-info,dns-cache-snoop 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:18 EST
+Stats: 0:05:41 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 24.23% done; ETC: 10:41 (0:17:00 remaining)
+Stats: 0:05:42 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 24.24% done; ETC: 10:41 (0:16:59 remaining)
+Nmap scan report for 192.168.1.129
+Host is up (0.00029s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1365.13 seconds
