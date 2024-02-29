@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1709137783" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.92" startstr="Wed Feb 28 16:29:43 2024" args="nmap -p 1-65535 -T4 -A -v 192.168.1.129"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.92 ( https://nmap.org ) at 2024-02-28 16:29 UTC
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:29
+Completed NSE at 16:29, 0.00s elapsed
+Initiating NSE at 16:29
+Completed NSE at 16:29, 0.00s elapsed
+Initiating NSE at 16:29
+Completed NSE at 16:29, 0.00s elapsed
+Initiating ARP Ping Scan at 16:29
+Scanning 192.168.1.129 [1 port]
+Completed ARP Ping Scan at 16:29, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:29
+Completed Parallel DNS resolution of 1 host. at 16:29, 5.53s elapsed
+Initiating SYN Stealth Scan at 16:29
+Scanning 192.168.1.129 [65535 ports]
+SYN Stealth Scan Timing: About 2.21% done; ETC: 16:53 (0:22:52 remaining)
+SYN Stealth Scan Timing: About 5.11% done; ETC: 16:52 (0:21:41 remaining)
+SYN Stealth Scan Timing: About 9.57% done; ETC: 16:52 (0:20:28 remaining)
+SYN Stealth Scan Timing: About 14.48% done; ETC: 16:52 (0:19:17 remaining)
+SYN Stealth Scan Timing: About 19.40% done; ETC: 16:52 (0:18:09 remaining)
+SYN Stealth Scan Timing: About 24.48% done; ETC: 16:52 (0:17:01 remaining)
+SYN Stealth Scan Timing: About 29.76% done; ETC: 16:52 (0:15:51 remaining)
+SYN Stealth Scan Timing: About 34.85% done; ETC: 16:52 (0:14:42 remaining)
+SYN Stealth Scan Timing: About 39.99% done; ETC: 16:52 (0:13:32 remaining)
+SYN Stealth Scan Timing: About 45.14% done; ETC: 16:52 (0:12:21 remaining)
+SYN Stealth Scan Timing: About 50.26% done; ETC: 16:52 (0:11:12 remaining)
+SYN Stealth Scan Timing: About 55.37% done; ETC: 16:52 (0:10:03 remaining)
+SYN Stealth Scan Timing: About 60.52% done; ETC: 16:52 (0:08:53 remaining)
+SYN Stealth Scan Timing: About 65.65% done; ETC: 16:52 (0:07:44 remaining)
+SYN Stealth Scan Timing: About 70.73% done; ETC: 16:52 (0:06:35 remaining)
+SYN Stealth Scan Timing: About 75.86% done; ETC: 16:52 (0:05:26 remaining)
+SYN Stealth Scan Timing: About 80.99% done; ETC: 16:52 (0:04:17 remaining)
+SYN Stealth Scan Timing: About 86.12% done; ETC: 16:52 (0:03:07 remaining)
+SYN Stealth Scan Timing: About 91.25% done; ETC: 16:52 (0:01:58 remaining)
+SYN Stealth Scan Timing: About 96.37% done; ETC: 16:52 (0:00:49 remaining)
+Completed SYN Stealth Scan at 16:52, 1348.21s elapsed (65535 total ports)
+Initiating Service scan at 16:52
+Initiating OS detection (try #1) against 192.168.1.129
+Retrying OS detection (try #2) against 192.168.1.129
+NSE: Script scanning 192.168.1.129.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Nmap scan report for 192.168.1.129
+Host is up (0.00018s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.17 ms 192.168.1.129
+
+NSE: Script Post-scanning.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Read data files from: /usr/local/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1356.89 seconds
+           Raw packets sent: 131119 (5.774MB) | Rcvd: 1 (28B)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.1.129"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:C2:DB:F7"></address><hostnames></hostnames><ports><extraports count="65535" state="filtered"></extraports></ports><os></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="" class=""></ipidsequence><tcptssequence values="" class=""></tcptssequence><trace port="" proto=""><hop rtt="0.17" host="" ipaddr="192.168.1.129" ttl="1"></hop></trace></host><runstats><finished timestr="Wed Feb 28 16:52:20 2024" time="1709139140"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1709080095" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.92" startstr="Wed Feb 28 00:28:15 2024" args="nmap -p 1-65535 -T4 -A -v 192.168.1.101"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.92 ( https://nmap.org ) at 2024-02-28 00:28 UTC
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 00:28
+Completed NSE at 00:28, 0.00s elapsed
+Initiating NSE at 00:28
+Completed NSE at 00:28, 0.00s elapsed
+Initiating NSE at 00:28
+Completed NSE at 00:28, 0.00s elapsed
+Initiating ARP Ping Scan at 00:28
+Scanning 192.168.1.101 [1 port]
+Completed ARP Ping Scan at 00:28, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 00:28
+Completed Parallel DNS resolution of 1 host. at 00:28, 0.10s elapsed
+Initiating SYN Stealth Scan at 00:28
+Scanning 192.168.1.101 [65535 ports]
+Discovered open port 80/tcp on 192.168.1.101
+Discovered open port 139/tcp on 192.168.1.101
+Discovered open port 22/tcp on 192.168.1.101
+Discovered open port 111/tcp on 192.168.1.101
+Discovered open port 23/tcp on 192.168.1.101
+Discovered open port 21/tcp on 192.168.1.101
+Discovered open port 25/tcp on 192.168.1.101
+Discovered open port 3306/tcp on 192.168.1.101
+Discovered open port 445/tcp on 192.168.1.101
+Discovered open port 1099/tcp on 192.168.1.101
+Discovered open port 3632/tcp on 192.168.1.101
+Discovered open port 38079/tcp on 192.168.1.101
+Discovered open port 8009/tcp on 192.168.1.101
+Discovered open port 6697/tcp on 192.168.1.101
+Discovered open port 55471/tcp on 192.168.1.101
+Discovered open port 6000/tcp on 192.168.1.101
+Discovered open port 8787/tcp on 192.168.1.101
+Discovered open port 512/tcp on 192.168.1.101
+Discovered open port 8180/tcp on 192.168.1.101
+Discovered open port 5432/tcp on 192.168.1.101
+Discovered open port 2121/tcp on 192.168.1.101
+Discovered open port 40975/tcp on 192.168.1.101
+Discovered open port 2049/tcp on 192.168.1.101
+Discovered open port 513/tcp on 192.168.1.101
+Discovered open port 1524/tcp on 192.168.1.101
+Discovered open port 514/tcp on 192.168.1.101
+Discovered open port 44336/tcp on 192.168.1.101
+Completed SYN Stealth Scan at 00:28, 2.84s elapsed (65535 total ports)
+Initiating Service scan at 00:28
+Scanning 27 services on 192.168.1.101
+Service scan Timing: About 37.04% done; ETC: 00:30 (0:01:18 remaining)
+Service scan Timing: About 44.44% done; ETC: 00:31 (0:01:58 remaining)
+Completed Service scan at 00:31, 163.63s elapsed (27 services on 1 host)
+Initiating OS detection (try #1) against 192.168.1.101
+NSE: Script scanning 192.168.1.101.
+Initiating NSE at 00:31
+Completed NSE at 00:34, 196.29s elapsed
+Initiating NSE at 00:34
+Completed NSE at 00:40, 376.36s elapsed
+Initiating NSE at 00:40
+Completed NSE at 00:40, 0.00s elapsed
+Nmap scan report for 192.168.1.101
+Host is up (0.00021s latency).
+Not shown: 65506 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+21/tcp    open     ftp?
+22/tcp    open     tcpwrapped
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+23/tcp    open     telnet?
+25/tcp    open     smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp    open     http?
+111/tcp   open     rpcbind?
+139/tcp   open     netbios-ssn?
+445/tcp   open     microsoft-ds?
+512/tcp   open     exec?
+513/tcp   open     login?
+514/tcp   open     shell?
+1099/tcp  open     java-rmi      GNU Classpath grmiregistry
+1524/tcp  open     ingreslock?
+2049/tcp  open     nfs           2-4 (RPC #100003)
+2121/tcp  open     ccproxy-ftp?
+3306/tcp  open     mysql?
+3632/tcp  open     distccd?
+5432/tcp  open     postgresql?
+|_ssl-date: 2076-11-20T01:33:40+00:00; +52y266d00h58m31s from scanner time.
+5900/tcp  filtered vnc
+6000/tcp  open     X11?
+|_x11-access: ERROR: Script execution failed (use -d to debug)
+6667/tcp  filtered irc
+6697/tcp  open     ircs-u?
+|_irc-info: Unable to open connection
+8009/tcp  open     ajp13         Apache Jserv (Protocol v1.3)
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8180/tcp  open     http          Apache Tomcat/Coyote JSP engine 1.1
+|_http-title: Apache Tomcat/5.5
+8787/tcp  open     drb           Ruby DRb RMI (Ruby 1.8; path /usr/lib/ruby/1.8/drb)
+38079/tcp open     nlockmgr      1-4 (RPC #100021)
+40975/tcp open     mountd        1-3 (RPC #100005)
+44336/tcp open     java-rmi      GNU Classpath grmiregistry
+55471/tcp open     status        1 (RPC #100024)
+MAC Address: 08:00:27:18:48:9E (Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Uptime guess: 369.592 days (since Thu Feb 23 10:27:31 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=199 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+|_clock-skew: 19259d00h58m30s
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.22 ms 192.168.1.101
+
+NSE: Script Post-scanning.
+Initiating NSE at 00:40
+Completed NSE at 00:40, 0.00s elapsed
+Initiating NSE at 00:40
+Completed NSE at 00:40, 0.00s elapsed
+Initiating NSE at 00:40
+Completed NSE at 00:40, 0.00s elapsed
+Read data files from: /usr/local/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 741.18 seconds
+           Raw packets sent: 65557 (2.885MB) | Rcvd: 65554 (2.623MB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="192.168.1.101"></address><address addrtype="mac" vendor="Oracle VirtualBox virtual NIC" addr="08:00:27:18:48:9E"></address><hostnames></hostnames><ports><extraports count="65506" state="closed"></extraports><port protocol="tcp" portid="21"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ftp"></service></port><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="probed" conf="8" name="tcpwrapped"></service></port><port protocol="tcp" portid="23"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="telnet"></service></port><port protocol="tcp" portid="25"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="smtp"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="111"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="rpcbind"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="netbios-ssn"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="512"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="exec"></service></port><port protocol="tcp" portid="513"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="login"></service></port><port protocol="tcp" portid="514"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="shell"></service></port><port protocol="tcp" portid="1099"><state reason="syn-ack" state="open" reason_ttl="64"></state><service product="GNU Classpath grmiregistry" method="probed" conf="10" name="java-rmi"></service></port><port protocol="tcp" portid="1524"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ingreslock"></service></port><port protocol="tcp" portid="2049"><state reason="syn-ack" state="open" reason_ttl="64"></state><service version="2-4" extrainfo="RPC #100003" method="probed" conf="10" name="nfs"></service></port><port protocol="tcp" portid="2121"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ccproxy-ftp"></service></port><port protocol="tcp" portid="3306"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="mysql"></service></port><port protocol="tcp" portid="3632"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="distccd"></service></port><port protocol="tcp" portid="5432"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="postgresql"></service></port><port protocol="tcp" portid="5900"><state reason="no-response" state="filtered" reason_ttl="0"></state><service method="table" conf="3" name="vnc"></service></port><port protocol="tcp" portid="6000"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="X11"></service></port><port protocol="tcp" portid="6667"><state reason="no-response" state="filtered" reason_ttl="0"></state><service method="table" conf="3" name="irc"></service></port><port protocol="tcp" portid="6697"><state reason="syn-ack" state="open" reason_ttl="64"></state><service method="table" conf="3" name="ircs-u"></service></port><port protocol="tcp" portid="8009"><state reason="syn-ack" state="open" reason_ttl="64"></state><service product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10" name="ajp13"></service></port><port protocol="tcp" portid="8180"><state reason="syn-ack" state="open" reason_ttl="64"></state><service product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="8787"><state reason="syn-ack" state="open" reason_ttl="64"></state><service product="Ruby DRb RMI" extrainfo="Ruby 1.8; path /usr/lib/ruby/1.8/drb" method="probed" conf="10" name="drb"></service></port><port protocol="tcp" portid="38079"><state reason="syn-ack" state="open" reason_ttl="64"></state><service version="1-4" extrainfo="RPC #100021" method="probed" conf="10" name="nlockmgr"></service></port><port protocol="tcp" portid="40975"><state reason="syn-ack" state="open" reason_ttl="64"></state><service version="1-3" extrainfo="RPC #100005" method="probed" conf="10" name="mountd"></service></port><port protocol="tcp" portid="44336"><state reason="syn-ack" state="open" reason_ttl="64"></state><service product="GNU Classpath grmiregistry" method="probed" conf="10" name="java-rmi"></service></port><port protocol="tcp" portid="55471"><state reason="syn-ack" state="open" reason_ttl="64"></state><service version="1" extrainfo="RPC #100024" method="probed" conf="10" name="status"></service></port></ports><os><portused state="open" portid="21" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="36844" proto="udp"></portused><osmatch line="59346" name="Linux 2.6.9 - 2.6.33" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Thu Feb 23 10:27:31 2023" seconds="31932785"></uptime><tcpsequence index="199" values="D402697C,D3E69CBF,D40A9B38,D48881F6,D45EE062,D45878BE" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="BE54B028,BE54B032,BE54B03C,BE54B046,BE54B050,BE54B05A" class="100HZ"></tcptssequence><trace port="" proto=""><hop rtt="0.22" host="" ipaddr="192.168.1.101" ttl="1"></hop></trace></host><runstats><finished timestr="Wed Feb 28 00:40:36 2024" time="1709080836"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>
