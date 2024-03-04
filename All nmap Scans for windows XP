@@ -1,90 +1,121 @@
 --TCP SCAN--
-nmap -p- -sT 192.168.1.129                               
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:16 EST
-Stats: 0:00:05 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
-Connect Scan Timing: About 0.01% done
-Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
-Connect Scan Timing: About 0.01% done
-Stats: 0:08:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
-Connect Scan Timing: About 35.55% done; ETC: 10:38 (0:14:25 remaining)
-Stats: 0:08:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
-Connect Scan Timing: About 35.55% done; ETC: 10:38 (0:14:25 remaining)
-Stats: 0:08:03 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
-Connect Scan Timing: About 35.58% done; ETC: 10:38 (0:14:24 remaining)
-Nmap scan report for 192.168.1.129
-Host is up (0.00016s latency).
-All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 filtered tcp ports (no-response)
-MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 1350.76 seconds
-
---SYN SCAN--
-nmap -p- -sS 192.168.1.129        
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:16 EST
+nmap -p- -sT 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:03 EST
 Nmap scan report for 192.168.1.129
 Host is up (0.00015s latency).
-All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 filtered tcp ports (no-response)
+Not shown: 65531 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2869/tcp open  icslap
 MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
 
-Nmap done: 1 IP address (1 host up) scanned in 1352.00 seconds
+Nmap done: 1 IP address (1 host up) scanned in 16.97 seconds
+
+
+--SYN SCAN--
+nmap -p- -sS 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:05 EST
+Nmap scan report for 192.168.1.129
+Host is up (0.00012s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2869/tcp open  icslap
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 18.36 seconds
+
 
 --UDP SCAN--
 nmap -p- -sU 192.168.1.129
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:17 EST
-Stats: 0:07:00 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
-UDP Scan Timing: About 30.88% done; ETC: 10:39 (0:15:29 remaining)
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:07 EST
 Nmap scan report for 192.168.1.129
-Host is up (0.00028s latency).
-All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 open|filtered udp ports (no-response)
+Host is up (0.00010s latency).
+Not shown: 65527 closed udp ports (port-unreach)
+PORT     STATE         SERVICE
+123/udp  open          ntp
+137/udp  open          netbios-ns
+138/udp  open|filtered netbios-dgm
+445/udp  open|filtered microsoft-ds
+500/udp  open|filtered isakmp
+1030/udp open|filtered iad1
+1900/udp open|filtered upnp
+4500/udp open|filtered nat-t-ike
 MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
 
-Nmap done: 1 IP address (1 host up) scanned in 1352.60 seconds
+Nmap done: 1 IP address (1 host up) scanned in 3.82 seconds
+                                                           
 
 --XMAS SCAN--
-nmap -p- -sX 192.168.1.129        
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:17 EST
-Stats: 0:06:34 elapsed; 0 hosts completed (1 up), 1 undergoing XMAS Scan
-XMAS Scan Timing: About 28.96% done; ETC: 10:40 (0:15:54 remaining)
-Stats: 0:06:34 elapsed; 0 hosts completed (1 up), 1 undergoing XMAS Scan
-XMAS Scan Timing: About 28.98% done; ETC: 10:40 (0:15:56 remaining)
-Nmap scan report for 192.168.1.129
-Host is up (0.00072s latency).
-All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 open|filtered tcp ports (no-response)
-MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 1352.47 seconds
-
-
---NULL SCAN--
-nmap -p- -sN 192.168.1.129        
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:18 EST
-Stats: 0:06:06 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
-NULL Scan Timing: About 26.85% done; ETC: 10:40 (0:16:21 remaining)
-Stats: 0:06:06 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
-NULL Scan Timing: About 26.85% done; ETC: 10:40 (0:16:23 remaining)
-Nmap scan report for 192.168.1.129
-Host is up (0.00017s latency).
-All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 open|filtered tcp ports (no-response)
-MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 1352.82 seconds
-
--SCRIPT SCAN--
-nmap -p- --script vuln,amqp-info,dns-cache-snoop 192.168.1.129
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-28 10:18 EST
-Stats: 0:05:41 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
-SYN Stealth Scan Timing: About 24.23% done; ETC: 10:41 (0:17:00 remaining)
-Stats: 0:05:42 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
-SYN Stealth Scan Timing: About 24.24% done; ETC: 10:41 (0:16:59 remaining)
+nmap -p- -sX 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:08 EST
 Nmap scan report for 192.168.1.129
 Host is up (0.00029s latency).
 All 65535 scanned ports on 192.168.1.129 are in ignored states.
-Not shown: 65535 filtered tcp ports (no-response)
+Not shown: 65535 closed tcp ports (reset)
 MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
 
-Nmap done: 1 IP address (1 host up) scanned in 1365.13 seconds
+Nmap done: 1 IP address (1 host up) scanned in 18.17 seconds
+
+
+--NULL SCAN--
+nmap -p- -sN 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:10 EST
+Nmap scan report for 192.168.1.129
+Host is up (0.000089s latency).
+All 65535 scanned ports on 192.168.1.129 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 18.52 seconds
+
+-SCRIPT SCAN--
+nmap -p- --script vuln,amqp-info,dns-cache-snoop 192.168.1.129
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 22:12 EST
+Nmap scan report for 192.168.1.129
+Host is up (0.00017s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2869/tcp open  icslap
+MAC Address: 08:00:27:C2:DB:F7 (Oracle VirtualBox virtual NIC)
+
+Host script results:
+| smb-vuln-ms08-067: 
+|   VULNERABLE:
+|   Microsoft Windows system vulnerable to remote code execution (MS08-067)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2008-4250
+|           The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,
+|           Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary
+|           code via a crafted RPC request that triggers the overflow during path canonicalization.
+|           
+|     Disclosure date: 2008-10-23
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250
+|_      https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+|_smb-vuln-ms10-054: false
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-061: ERROR: Script execution failed (use -d to debug)
+
+Nmap done: 1 IP address (1 host up) scanned in 56.59 seconds
